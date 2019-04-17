@@ -1,0 +1,156 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="progress_drawable_default">
+        <item name="android:maxWidth">30.0dip</item>
+        <item name="android:maxHeight">30.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/cs_shape_progressbar</item>
+        <item name="android:minWidth">30.0dip</item>
+        <item name="android:minHeight">30.0dip</item>
+    </style>
+    <!-- 侧滑菜单TextView样式 -->
+    <style name="left_textview_default">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/left_menu_text</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <!-- 侧滑菜单CheckBox样式 -->
+    <style name="left_checkbox_default">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:drawableLeft">@drawable/left_menu_check_c</item>
+    </style>
+    <!-- 侧滑菜单Button样式 -->
+    <style name="left_button_default">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/left_menu_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/left_menu_btn_selector</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+    <!-- Home界面切换实时视频和录像组按钮样式 -->
+    <style name="top_list_view">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@drawable/qq_constact_font</item>
+        <item name="android:background">@drawable/qq_constact_group</item>
+    </style>
+     <style name="top_list_pic">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@drawable/qq_constact_font</item>
+        <item name="android:background">@drawable/qq_constact_group_center</item>
+    </style>
+    <!-- Home界面切换实时视频和录像组按钮样式 -->
+    <style name="top_pic_view">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@drawable/qq_constact_font</item>
+        <item name="android:background">@drawable/qq_constact_all</item>
+    </style>
+    <!-- Home底部导航栏RadioButton样式 -->
+    <style name="home_tab_bottom">
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+    <!-- 我看我家录像回放文字样式样式 -->
+    <style name="house_pager_videoTap_text">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textColor">@color/housepager_online_video_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- 我看我家录像视频提示文字样式 -->
+    <style name="house_pager_video_bottom_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/housepager_online_videoTap_bottomInfo</item>
+        <item name="android:drawableLeft">@drawable/house_pager_videotap_bottominfo_shap</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+    </style>
+
+    <style name="AppTheme2" parent="android:Theme.Light" />
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <!-- 视频录像播放时长选择 -->
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+    <!-- 开关门记录查询操作栏文字1sytle -->
+	<style name="record_pager_door_text1">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_gravity">center</item>
+	    <item name="android:layout_weight">0.8</item>
+	    <item name="android:textSize">15.0sp</item>
+	    <item name="android:textColor">@color/record_pager_text_color</item>
+	    <item name="android:gravity">center</item>
+	</style>
+	<!-- 开关门记录查询操作栏文字2sytle -->
+	<style name="record_pager_door_text2">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_weight">1</item>
+	    <item name="android:background">@drawable/record_pager_text_bkg</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:paddingBottom">4dp</item>
+	    <item name="android:paddingLeft">6dp</item>
+	    <item name="android:paddingRight">6dp</item>
+	    <item name="android:paddingTop">4dp</item>
+	    <item name="android:singleLine">true</item>
+	    <item name="android:textSize">15.0sp</item>
+	    <item name="android:textColor">@color/record_pager_text_color</item>
+	</style>
+	<!-- 设备布撤防记录item文字样式 -->
+	<style name="device_record_text">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">13sp</item>
+	    <item name="android:textColor">@color/device_state_item_text</item>
+	</style>
+</resources>

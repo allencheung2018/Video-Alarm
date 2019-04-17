@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_title_bar_h" 
+    android:background="@color/home_titlebar_bkg">
+    <ImageView 
+        android:id="@+id/home_menu_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/home_title_icon"
+        android:layout_alignParentLeft="true"
+        />
+     <LinearLayout
+        android:id="@+id/video_selector"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+     <Button
+            android:id="@+id/title_online_video_btn"
+            style="@style/top_list_view"
+            android:text="实时视频" 
+            android:enabled="false"/>
+      <Button
+            android:id="@+id/title_passenger_flow"
+            style="@style/top_list_pic"
+            android:text="出入统计" 
+            android:enabled="true"/>
+        <Button
+            android:id="@+id/title_video_tap_btn"
+            style="@style/top_pic_view"
+            android:text="录像回放" 
+            android:enabled="true"/>
+    </LinearLayout>
+    
+     <TextView 
+         android:id="@+id/home_tv_text"
+         android:layout_width="150dp"
+         android:layout_height="wrap_content"
+         android:paddingTop="5dp"
+         android:paddingBottom="5dp"
+         android:textColor="@color/home_title_text"
+         android:textSize="16sp"
+         android:visibility="gone"
+         android:text="@string/home_title_text_linkedage"
+         android:layout_centerInParent="true"
+         android:gravity="center"
+         />
+</RelativeLayout>

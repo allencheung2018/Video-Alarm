@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp">
+    
+    <ImageView
+        android:id="@+id/video_iv_play"
+        android:layout_width="88dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="18dp"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/video_play_icon" />
+
+    <TextView
+        android:id="@+id/video_tv_channelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/video_iv_play"
+        android:text="大门"
+        android:textColor="@color/housepager_videochannel_name"
+        android:textSize="19sp" />
+    
+    <TextView
+        android:id="@+id/video_tv_channeltype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:text="出入通道"
+        android:textColor="@color/housepager_videochannel_name"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

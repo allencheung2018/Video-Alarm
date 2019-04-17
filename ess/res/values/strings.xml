@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">视频报警器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Settint_Ip">高级设置</string>
+    <string name="version">版本号</string>
+    <string name="home_title_text_linkedage">开关控制</string>
+    <string name="home_title_text_device">设备管理</string>
+    <string name="home_title_record_alarm">报警记录</string>
+    <string name="home_title_record_door">出入摘要</string>
+    <string name="home_title_online_video">实时视频</string>
+    <string name="home_title_video_tap">录像回放</string>
+
+    <string name="house_pager_videoTap_startTime">开始时间：</string>
+    <string name="house_pager_videoTap_Long">播放时长：</string>
+    <string name="house_pager_videoTap_info">点击视频通道开始回放</string>
+    <string name="house_pager_onlineVideo_info">点击视频通道播放该通道视频</string>
+    <string name="device_pager_onlineVideo_info">点击按键进行开关操作，绿色表示开关处于打开状态</string>
+    <string name="device_pager_loading">正在加载......</string>
+    <string name="nomoredata">无更多数据</string>
+    
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+ 	<string name="refreshing">正在刷新…</string>
+ 	<string name="not_updated_yet">暂未更新过</string>
+ 	<string name="updated_at">上次更新于%1$s前</string>
+ 	<string name="updated_just_now">刚刚更新</string>
+ 	<string name="time_error">时间有问题</string>
+
+    
+    <string name="record_pager_startTime">开始时间：</string>
+    <string name="record_pager_endTime">结束时间：</string>
+    <string name="record_pager_normalTime">常用时间：</string>
+    <string name="record_pager_queryRecord">查询</string>
+    
+    <string name="record_pager_queryInfo">点击记录可回放录像</string>
+    <string name="record_pager_doornorecord">暂无出入记录</string>
+    <string name="record_pager_alarmnorecord">暂无报警记录</string>
+    
+    
+    <string name="device_pager_dissalarm_normal">临时撤防</string>
+    <string name="device_pager_dissalarm_hand">手动撤防</string>
+    <string name="device_pager_automatic">自动布防</string>
+    <string name="device_pager_manual">手动布防</string>
+    <string name="device_pager_trusteeship">设备托管</string>
+    <string name="device_state">设备状态：</string>
+    <string name="device_close_date">服务到期：</string>
+    <string name="device_hand_record">布撤防记录</string>
+    
+    <string name="about_item_version">版本更新</string>
+    <string name="about_item_function">功能介绍</string>
+    <string name="about_item_newVersion">已经是最新版本</string>
+    
+    <string name="about_item_version_info">视频报警器  V1.0.0</string>
+    <string name="about_me">深圳辉锐天眼科技有限公司   版权所有</string>
+    <string name="about">关于</string>
+    
+</resources>

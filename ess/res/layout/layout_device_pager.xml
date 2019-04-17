@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_device_state"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_pager_operation"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/device_state_shap" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/device_state"
+                    android:textColor="@color/device_state_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/device_state"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/device_state_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="@string/device_close_date"
+                    android:textColor="@color/device_state_text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/device_close_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/device_state_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/device_radio"
+        android:layout_below="@id/rl_device_state"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/device_state_shap2"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/device_state_shap2" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/device_hand_record"
+                android:textColor="@color/device_state_text"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/device_handle_records"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:listSelector="@drawable/transparent"
+            android:scrollbars="none" 
+            android:layout_marginBottom="25dp"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/device_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_dissalarm_normal"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/device_state_shap"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:paddingTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/manual"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:textColor="@color/device_state_text_selector"
+            android:textSize="14sp" 
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/icon_manual"
+            android:text="@string/device_pager_manual"
+            android:paddingTop="8dp"
+            android:paddingLeft="0dp"
+            />
+
+        <RadioButton
+            android:id="@+id/trusteeship"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_trusteeship"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:paddingLeft="0dp"
+            android:paddingTop="8dp"
+            android:text="@string/device_pager_trusteeship"
+            android:textColor="@color/device_state_text_selector"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/automatic"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:textColor="@color/device_state_text_selector"
+            android:textSize="14sp" 
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/icon_automatic"
+            android:text="@string/device_pager_automatic"
+            android:paddingTop="8dp"
+            android:paddingLeft="0dp"
+            />
+
+        <RadioButton
+            android:id="@+id/dissalarm_hand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:drawablePadding="8dp"
+            android:textColor="@color/device_state_text_selector"
+            android:textSize="14sp" 
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:layout_weight="1.0"
+            android:drawableTop="@drawable/icon_hand_dissalarm"
+            android:text="@string/device_pager_dissalarm_hand"
+            android:paddingTop="8dp"
+            android:paddingLeft="0dp"
+            />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_dissalarm_normal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/device_pager_operation"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/dissalarm_noraml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/device_pager_dissalarm_bkg_selector"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/device_pager_dissalarm_normal"
+            android:textColor="@color/dissalarm_normal"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

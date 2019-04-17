@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/door_record_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/ststcBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/record_pager_operation_bkg" >
+
+            <TextView
+                android:id="@+id/total_entrynum"
+                style="@style/house_pager_video_bottom_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text=" 条记录" />
+
+            <TextView
+                android:id="@+id/show_entrynum"
+                style="@style/house_pager_video_bottom_text"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="false"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/total_entrynum"
+                android:text=" 条记录" />
+
+            <TextView
+                style="@style/house_pager_video_bottom_text"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:text="@string/record_pager_queryInfo" />
+            
+            <ImageView
+                android:id="@+id/iv_downPanel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:src="@drawable/qz_icon_navbar_drop_up" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ststcBar"
+            android:layout_weight="1" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+		        android:id="@+id/pull_refresh_list"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:cacheColorHint="#00000000"
+		        android:divider="#19000000"
+		        android:dividerHeight="4dp"
+		        android:fadingEdge="none"
+		        android:fastScrollEnabled="false"
+		        android:footerDividersEnabled="false"
+		        android:headerDividersEnabled="false"
+		        android:smoothScrollbar="true" />
+
+            <TextView
+                android:id="@+id/doorrecords_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_pager_loading" />
+
+            <TextView
+                android:id="@+id/doorrecords_no_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/record_pager_doornorecord"
+                android:visibility="gone" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/lyo_entrySetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ststcBar"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/record_pager_operation_bkg"
+            android:paddingBottom="2dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/record_pager_door_text1"
+                        android:text="@string/record_pager_startTime" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:id="@+id/doorRecord_startDate"
+                            style="@style/record_pager_door_text2"
+                            android:text="2015-04-09" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.1" />
+
+                        <TextView
+                            android:id="@+id/doorRecord_startTime"
+                            style="@style/record_pager_door_text2"
+                            android:text="12:00" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/record_pager_door_text1"
+                        android:text="@string/record_pager_endTime" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/doorRecord_endDate"
+                            style="@style/record_pager_door_text2"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:text="2015-04-09" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.1" />
+                        <TextView
+                            android:id="@+id/doorRecord_endTime"
+                            style="@style/record_pager_door_text2"
+                            android:text="12:00" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="0.1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                 <TextView
+                        style="@style/record_pager_door_text1"
+                        android:text="视频通道  :" />
+               <LinearLayout
+                 android:orientation="horizontal"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="2">
+
+               <LinearLayout
+                   style="@style/record_pager_door_text2"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="0dip"
+                   android:padding="0dip" >
+ 
+                  <Spinner
+                      android:id="@+id/doorRecord_Spinner"
+                      android:layout_width="80dp"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="0dip"
+                      android:background="#00000000"
+                      android:padding="0dip"
+                      android:textSize="12.0sp" >
+
+                   </Spinner>
+
+                   <ImageView
+                       android:id="@+id/selectChannelId"
+                       android:layout_width="wrap_content"
+                       android:layout_height="30.0dip"
+                       android:layout_margin="0dip"
+                       android:background="@android:color/transparent"
+                       android:clickable="true"
+                       android:padding="0dip"
+                       android:scaleType="center"
+                       android:src="@drawable/qz_icon_navbar_drop_down" />
+
+                 </LinearLayout>
+   
+<!--                  <TextView
+                            android:id="@+id/doorRecord_normalTime"
+                            style="@style/record_pager_door_text2"
+                            android:text="今天" /> -->
+<!--            <LinearLayout
+              style="@style/record_pager_door_text2"
+              android:gravity="center"
+              android:orientation="horizontal"
+              android:textColor="@color/record_pager_text_color" 
+              android:layout_margin="0dip"
+              android:padding="0dip"> -->
+<!--              <Spinner
+                            android:id="@+id/doorRecord_normalTimeSpinner"
+                            android:textSize="12sp" 
+                            android:background="#00000000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0dip"
+                           android:padding="0dip">
+             </Spinner> -->
+<!--              <ImageView
+                    android:id="@+id/selectDayId"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_gravity="right"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:layout_margin="0dip"
+                    android:padding="0dip"
+                    android:scaleType="center"
+                    android:src="@drawable/qz_icon_navbar_drop_down" /> -->
+<!--                   </LinearLayout> -->
+
+                  <View
+                      android:layout_width="0dp"
+                      android:layout_height="2dp"
+                      android:layout_weight="0.1" />
+
+				<RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+                  <Button
+                      android:id="@+id/record_pager_querybtn"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:background="@drawable/record_pager_querybtn_selector"
+                      android:gravity="center"
+                      android:paddingBottom="4dp"
+                      android:paddingLeft="19dp"
+                      android:paddingRight="19dp"
+                      android:paddingTop="4dp"
+                      android:text="@string/record_pager_queryRecord"
+                      android:textSize="15.0sp" />
+                  </RelativeLayout>
+
+                 <View
+                     android:layout_width="0dp"
+                     android:layout_height="2dp"
+                     android:layout_weight="0.1" />
+
+                 </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/alarm_record_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/alarm_record_info_bkg" >
+
+            <TextView
+                style="@style/house_pager_video_bottom_text"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/record_pager_queryInfo" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/alarmRecords"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@drawable/record_listview_divider_shap"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:listSelector="@drawable/record_pager_listview_item_selector"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/alarmrecords_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_pager_loading" />
+
+            <TextView
+                android:id="@+id/alarmrecords_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/record_pager_alarmnorecord" />
+        </RelativeLayout>
+    </LinearLayout>
+  <LinearLayout  android:id="@+id/flow_record_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout android:id="@+id/flowQueryLayout"
+          android:layout_marginTop="0dp"
+          android:layout_height="50dp"
+          android:layout_width="match_parent"
+          android:background="@drawable/record_pager_operation_bkg"
+          android:paddingBottom="2dp" 
+          android:gravity="center">
+          <TextView android:id="@+id/txt_flow_title" 
+                       style="@style/record_pager_door_text1"
+                        android:text="出入总数：" android:layout_weight="1">
+          </TextView> 
+                  <TextView android:id="@+id/txt_flow_value" 
+                       style="@style/record_pager_door_text1"
+                        android:text="0000" android:layout_weight="1"></TextView>
+            <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"  android:gravity="center">
+                  <TextView android:id="@+id/txt_flowStatisticsDate_value"
+                        style="@style/record_pager_door_text2"
+                        android:text="2015-7-23" 
+                        android:layout_marginRight="5dp"></TextView>
+          </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+         <ListView
+                android:id="@+id/flowRecords"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@drawable/record_listview_divider_shap"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:listSelector="@drawable/record_pager_listview_item_selector"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/flowrecords_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_pager_loading" 
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/flowrecords_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="无记录" 
+                android:visibility="gone"/>
+        </RelativeLayout>
+  </LinearLayout>
+  <LinearLayout  android:id="@+id/chanenlflow_record_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+       <LinearLayout android:id="@+id/chanenlflow_QueryLayoutss"
+          android:layout_marginTop="0dp"
+          android:layout_height="50dp"
+          android:layout_width="match_parent"
+          android:background="@drawable/record_pager_operation_bkg"
+          android:paddingBottom="2dp" >
+              <RelativeLayout android:layout_gravity="center" 
+                  android:layout_width="0dp" 
+                  android:layout_height="match_parent"
+                  android:layout_weight="1" 
+                  android:layout_centerInParent="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true">
+                <ImageView
+                  android:id="@+id/flow_pager_rbtn"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="12dp"
+                  android:scaleType="center"
+                  android:gravity="center" 
+                  android:src="@drawable/return_button" />
+              <TextView  android:text="统计通道"  
+     		 	 android:layout_width="wrap_content" 
+      			 android:layout_height="wrap_content"
+                  android:textSize="14sp" android:layout_gravity="center" 
+                  android:layout_centerInParent="true"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"></TextView>
+              </RelativeLayout>
+               <Spinner
+                            android:id="@+id/channel_Spinner"
+                            android:textSize="12sp" 
+                            android:background="#00000000"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                           android:layout_weight="1" 
+                           android:layout_gravity="center"
+                           android:layout_centerInParent="true"
+                          android:layout_centerHorizontal="true"
+                          android:layout_centerVertical="true">
+             </Spinner>
+         </LinearLayout>
+         <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+         <ListView
+                android:id="@+id/channelflowRecords"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@drawable/record_listview_divider_shap"
+                android:fadingEdge="none"
+                android:focusable="true"
+                android:listSelector="@drawable/record_pager_listview_item_selector"
+                android:scrollbars="none" />
+
+            <TextView
+                android:id="@+id/channelflowrecords_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/device_pager_loading" 
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/channelflowrecords_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="无记录" 
+                android:visibility="gone"/>
+        </RelativeLayout>
+   </LinearLayout>
+</RelativeLayout>

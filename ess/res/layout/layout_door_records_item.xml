@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    >
+
+    <ImageView 
+        android:id="@+id/doorImage"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:src="@drawable/video_play_icon"
+        android:layout_marginLeft="8dp"
+        />
+        
+    <TextView 
+        android:id="@+id/door_record_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-04-09"
+        android:layout_toRightOf="@id/doorImage"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:textSize="21sp"
+        android:textColor="@color/door_record_item_text"
+        />
+    <TextView 
+        android:id="@+id/door_record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:12:11"
+        android:textSize="21sp"
+        android:textColor="@color/door_record_item_text"
+        android:layout_toRightOf="@id/door_record_date"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="19dp"
+        android:singleLine="true"
+        android:layout_marginLeft="12dp"
+        />
+</RelativeLayout>

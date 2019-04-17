@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupId"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dip"
+    android:layout_marginLeft="15.0dip"
+    android:layout_marginRight="15.0dip"
+    android:background="@drawable/container_cell_middle_dropdown"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingLeft="15.0dip" >
+    
+
+    <TextView
+        android:id="@+id/popQQ"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/popQQDelete"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:textColor="#ff666666"
+        android:textSize="15.0dip" />
+
+    <ImageView
+        android:id="@+id/popQQDelete"
+        android:layout_width="40.0dip"
+        android:layout_height="45.0dip"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="15.0dip"
+        android:scaleType="center"
+        android:src="@drawable/icon_del" />
+
+</RelativeLayout>

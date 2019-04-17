@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/left_menu_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/left_menu_bkg" >
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/left_menu_topicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left_menu_topicon" 
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/left_menu_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="张先生"
+            android:textColor="@color/left_menu_text"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/left_textview_default"
+                android:text="当前账号" />
+
+            <TextView
+                android:id="@+id/left_menu_usertext"
+                style="@style/left_textview_default"
+                android:layout_alignParentRight="true"
+                android:text="admin" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/left_textview_default"
+                    android:text="开机自启："
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_auto_start"
+                    style="@style/left_checkbox_default" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" >
+
+                <TextView
+                    style="@style/left_textview_default"
+                    android:layout_centerVertical="true"
+                    android:text="出入提示："
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_alert_door"
+                    style="@style/left_checkbox_default"
+                    android:layout_centerVertical="true"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" >
+
+                <TextView
+                    style="@style/left_textview_default"
+                    android:text="自动登录："
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_auto_login"
+                    style="@style/left_checkbox_default" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" 
+        android:layout_marginBottom="25dp"
+        >
+
+        <Button
+            android:id="@+id/left_menu_changeuser"
+            style="@style/left_button_default"
+            android:text="更换账号" />
+
+        <Button
+            android:id="@+id/left_menu_about"
+            style="@style/left_button_default"
+            android:text="关      于" />
+        
+        <Button
+            android:id="@+id/left_menu_update"
+            style="@style/left_button_default"
+            android:text="更      新" />
+
+        <Button
+            android:id="@+id/left_menu_exit"
+            style="@style/left_button_default"
+            android:text="退       出" />
+    </LinearLayout>
+
+</RelativeLayout>

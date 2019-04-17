@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:layout_margin="20dp"
+    android:background="@drawable/main_dialog_background" 
+    android:layout_gravity="center"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    >
+    
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip" 
+        android:gravity="center">
+        <TextView
+            android:id="@+id/dialog_alarm_alert"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="您有新的警情，请注意查收"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dialog_alarm_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_alarm_alert"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="报警类型："
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dialog_alarm_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_alarm_type"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="报警时间："
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/dialog_alarm_img"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/dialog_alarm_time"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/dialog_ok_btn"
+            android:layout_width="114dip"
+            android:layout_height="33dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="实时视频"
+            android:textColor="#ffffff"
+            android:background="@drawable/alarm_dialog_btn_bkg_selector" />
+        <Button
+            android:id="@+id/dialog_cancel_btn"
+            android:layout_width="114dip"
+            android:layout_height="33dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="查看录像"
+            android:textColor="#ffffff"
+            android:background="@drawable/alarm_dialog_btn_bkg_selector" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

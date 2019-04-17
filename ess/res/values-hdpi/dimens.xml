@@ -1,0 +1,5 @@
+<resources>
+	<!-- 报警图片高度 -->
+    <dimen name="alarm_imag_w">178dp</dimen>
+    <dimen name="alarm_imag_h">144dp</dimen>
+</resources>

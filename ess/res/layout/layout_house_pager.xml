@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/house_pager_videoTap"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/house_pager_videoTap_time"
+        android:layout_marginTop="6.0dp"
+        android:background="@color/housepager_online_video_timeselector"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_startTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/house_pager_videoTap_text"
+                    android:gravity="center"
+                    android:text="@string/house_pager_videoTap_startTime" />
+
+                <TextView
+                    android:id="@+id/house_pager_videoTap_startDate"
+                    style="@style/house_pager_videoTap_text"
+                    android:background="@drawable/house_pager_videotap_timeshap"
+                    android:paddingBottom="3dp"
+ 					android:paddingStart="8dp"   
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="0dp"   
+                    android:paddingRight="0dp"
+                    android:paddingTop="3dp"
+                    android:text="2015-04-03"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/house_pager_videoTap_startTime"
+                    style="@style/house_pager_videoTap_text"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/house_pager_videotap_timeshap"
+                    android:paddingBottom="3dp"
+                   android:paddingStart="8dp"   
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="0dp"   
+                    android:paddingRight="0dp"
+                    android:paddingTop="3dp"
+                    android:text="15:00:32"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_startTime"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/house_pager_videoTap_text"
+                    android:gravity="center"
+                    android:text="@string/house_pager_videoTap_Long" />
+
+                <TextView
+                    android:id="@+id/house_pager_video_playTime"
+                    style="@style/house_pager_videoTap_text"
+                    android:background="@drawable/house_pager_videotap_timeshap"
+                    android:paddingBottom="3dp"
+                    android:paddingStart="8dp"   
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="0dp"   
+                    android:paddingRight="0dp"
+                    android:paddingTop="3dp"
+                    android:text="5分钟"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/house_pager_video_bottom_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/house_pager_videoTap_info" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/house_pager_onlineVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ECEEF0" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D8D8D8" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:background="@color/housepager_online_video_timeselector">
+
+            <TextView
+                style="@style/house_pager_video_bottom_text"
+                android:text="@string/house_pager_onlineVideo_info" 
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView 
+        android:id="@+id/housePager_videoList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:focusable="true"
+        android:listSelector="@drawable/house_pager_videolist_selector"
+        android:scrollbars="none" 
+        />
+</LinearLayout>

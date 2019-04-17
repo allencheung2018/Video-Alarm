@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+    
+   <include 
+       android:id="@+id/home_titlebar"
+       layout="@layout/cs_home_title_bar"
+       />
+   
+   <com.hri.ess.view.LazyViewPager
+       android:id="@+id/home_pagers"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/home_line"
+       android:layout_below="@id/home_titlebar"
+       />
+   
+   <View
+       android:id="@+id/home_line"
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+       android:background="#5684B9"
+       android:layout_above="@+id/home_radio"
+       />
+    <RadioGroup
+        android:id="@+id/home_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/home_bottom_group_h"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="2dp" 
+        android:background="@color/home_bottom_bkg" >
+
+        <RadioButton
+            android:id="@+id/home_house"
+            style="@style/home_tab_bottom"
+            android:drawableTop="@drawable/icon_house"
+            />
+
+        <RadioButton
+            android:id="@+id/home_linkage"
+            style="@style/home_tab_bottom"
+            android:drawableTop="@drawable/icon_linkage"
+            />
+
+        <RadioButton
+            android:id="@+id/home_record"
+            style="@style/home_tab_bottom"
+            android:drawableTop="@drawable/icon_record"
+            />
+        <RadioButton
+            android:id="@+id/home_device"
+            style="@style/home_tab_bottom"
+            android:drawableTop="@drawable/icon_device"
+            />
+    </RadioGroup>
+</RelativeLayout>

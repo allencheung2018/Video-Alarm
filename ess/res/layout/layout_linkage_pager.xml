@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/device_pager_item_bkg" >
+
+        <TextView
+            style="@style/house_pager_video_bottom_text"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/device_pager_onlineVideo_info" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        
+        <TextView 
+            android:id="@+id/device_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/device_pager_loading"
+            />
+		<com.hri.ess.view.RefreshableView
+		    android:id="@+id/refreshable_view"
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent" >
+        <ListView
+            android:id="@+id/device_lists"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/device_list_divider_shap"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:listSelector="@drawable/transparent"
+            android:scrollbars="none" 
+            />
+        </com.hri.ess.view.RefreshableView>
+    </RelativeLayout>
+
+</LinearLayout>

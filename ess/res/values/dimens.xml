@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="slidingmenu_offset">102dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="historyscore_tb">10dp</dimen>
+    
+	<!-- HomeTitleBar高度 -->
+    <dimen name="home_title_bar_h">52.0dp</dimen>
+	<!-- HomeBottom高度 -->
+    <dimen name="home_bottom_group_h">60.0dp</dimen>
+    
+    <!-- 我看我家页面，录像回放时间选择布局高度 -->
+    <dimen name="house_pager_videoTap_time">68.0dp</dimen>
+    <!-- 我看我家页面，录像回放时间选择布局距离标题栏高度-->
+    <dimen name="house_pager_videoTap_time_margin">6.0dp</dimen>
+    <!-- 播放视频页面底部操作高度-->
+    <dimen name="video_bottom_operation">32.0dp</dimen>
+    <!-- 设备管理item高度 -->
+    <dimen name="device_pager_item">88.0dip</dimen>
+    <!-- 记录查询操作栏文字大小 -->
+    <dimen name="record_pager_operation_text">15.0sp</dimen>
+    <!-- 设备管理底部按钮高度 -->
+    <dimen name="device_pager_operation">68.0sp</dimen>
+    
+    
+</resources>

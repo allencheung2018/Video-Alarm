@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hri.ess"
+    android:versionCode="13"
+    android:versionName="1.1.4.6" >
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="21" />
+    <!-- 支持大中小屏幕 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 接收开机自启广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>  
+
+    <application
+        android:name="com.hri.ess.app.VillaApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/villasecurity_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        
+        <meta-data android:name="BDAPPID" android:value="7300414"/>
+    	<meta-data android:name="BDAPPKEY" android:value="ZLZNQDtfyExpSgzWaXkEUc6YkzhENVpW"/>
+
+        <!-- 登录Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 主Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" 
+            />
+        <!-- 视频播放Activity -->
+        <activity
+            android:name=".PlayVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:screenOrientation="landscape" 
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"/>
+        <!-- 播放报警录像Activity -->
+        <activity
+            android:name=".AlarmVideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:screenOrientation="landscape" 
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"/>
+        <activity 
+            android:name=".AboutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" 
+            />
+        <!-- 心跳服务 -->
+        <service android:name="com.hri.ess.service.SecurityService"/>
+        
+        <!-- 开机自启广播 -->
+        <receiver
+            android:name="com.hri.ess.receiver.BootBroadcastReceiver">
+             <intent-filter android:priority="1000">  
+                    <action android:name="android.intent.action.BOOT_COMPLETED"></action>  
+                    <category android:name="android.intent.category.LAUNCHER" />  
+                </intent-filter>  
+        </receiver>
+        
+        <!-- 自动更新SDK -->
+                <activity android:name="com.baidu.autoupdatesdk.ConfirmDialoigActivity"
+            android:screenOrientation="sensor"
+            android:exported="false"
+            android:theme="@style/bdp_update_dialog_style_fullscreen" />
+        
+        <receiver android:name="com.baidu.autoupdatesdk.receiver.BDBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_UPDATE"/>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_DOWNLOAD_COMPLETE"/>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_NEW_AS"/>
+                <action android:name="com.baidu.autoupdatesdk.ACTION_AS_DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        
+    </application>
+</manifest>
